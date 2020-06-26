@@ -1,2 +1,2 @@
-#JAVAX Validation Project
+# JAVAX Validation Project
 Sample project testing javax validation
