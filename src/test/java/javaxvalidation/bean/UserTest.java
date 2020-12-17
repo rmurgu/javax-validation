@@ -54,6 +54,11 @@ public class UserTest {
 
         // when
         Set<ConstraintViolation<User>> violations = validator.validate(user);
+        violations.forEach(userConstraintViolation -> {
+            System.out.println(userConstraintViolation.getConstraintDescriptor().getAnnotation().annotationType().getName());
+            System.out.println(userConstraintViolation.getPropertyPath());
+            System.out.println(userConstraintViolation.getMessage());
+        });
 
         // then
         assertEquals(1, violations.size());
@@ -68,10 +73,11 @@ public class UserTest {
 
         // when
         Set<ConstraintViolation<User>> violations = validator.validate(user);
+        violations.forEach(userConstraintViolation -> System.out.println(userConstraintViolation.getMessage()));
 
         // then
         assertEquals(1, violations.size());
-        assertEquals("You must be over 18", violations.iterator().next().getMessage());
+        assertEquals("Age must be over 18", violations.iterator().next().getMessage());
     }
 
     @Test
