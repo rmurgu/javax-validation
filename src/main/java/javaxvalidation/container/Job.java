@@ -25,4 +25,8 @@ public class Job {
     private void test(String s) {
         System.out.println(s);
     }
+
+    private void test2(String s) {
+        System.out.println(s);
+    }
 }
