@@ -27,4 +27,7 @@ public class Zoo {
     public void setEmployees(Map<Name, Job> employees) {
         this.employees = employees;
     }
+
+    private void test(){
+    }
 }
