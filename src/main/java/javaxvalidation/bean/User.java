@@ -4,10 +4,10 @@ import javax.validation.constraints.*;
 
 public class User {
 
-    @NotNull(message = "Name must not be null")
+    @NotNull
     private String name;
 
-    @Min(value = 18, message = "You must be over 18")
+    @Min(value = 18)
     private int age;
 
     @Email(message = "Email must be valid")
