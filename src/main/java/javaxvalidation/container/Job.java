@@ -21,12 +21,4 @@ public class Job {
     public void setDescription(String description) {
         this.description = description;
     }
-
-    private void test(String s) {
-        System.out.println(s);
-    }
-
-    private void test2(String s) {
-        System.out.println(s);
-    }
 }
